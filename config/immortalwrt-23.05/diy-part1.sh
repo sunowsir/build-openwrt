@@ -12,3 +12,4 @@
 # other
 # rm -rf package/emortal/{autosamba,ipv6-helper}
 
+sed -i 's/root:\/bin\/ash/root:\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
