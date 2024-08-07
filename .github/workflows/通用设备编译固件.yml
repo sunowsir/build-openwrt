@@ -51,7 +51,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Pull docker image
-        id: init
+        id: pull
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
@@ -59,7 +59,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Docker run
-        id: init
+        id: run
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
