@@ -49,7 +49,7 @@ jobs:
           sudo chown ${USER}:${GROUPS} /workdir
           sudo timedatectl set-timezone "${TZ}"
           docker pull sunowsir/immortalwrt-23.05-build:latest
-          docker run --name immortalwrt-23.05-build --privileged -p 2201:22 -e TZ=${TZ} -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v /workdir/oepnwrt/bin:/home/openwrt/immortalwrt/bin:rw docker.io/sunowsir/immortalwrt-23.05-build:latest /sbin/init
+          docker run --name immortalwrt-23.05-build --privileged -p 2201:22 -e TZ=${TZ} -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v /workdir/oepnwrt/bin:/home/openwrt/immortalwrt/bin:rw sunowsir/immortalwrt-23.05-build:latest /sbin/init
           ln -sf /workdir/openwrt ${GITHUB_WORKSPACE}/openwrt
           echo "status=success" >> ${GITHUB_OUTPUT}
 
