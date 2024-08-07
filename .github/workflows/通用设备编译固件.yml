@@ -55,7 +55,7 @@ jobs:
       - name: Compile the OpenWrt
         id: compile
         run: |
-          docker exec -it immortalwrt-23.05-build su -c "/home/openwrt/build.sh" openwrt
+          docker exec immortalwrt-23.05-build su -c "/home/openwrt/build.sh" openwrt
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Check space usage
